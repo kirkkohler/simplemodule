@@ -9,6 +9,9 @@
     "scripts": {
         "test": "mocha test/*.js"
     },
+    "bin": {
+        "simple-module": "./bin/simple-module"
+    },
     "author": "Kirk Kohler",
     "license": "ISC",
     "dependencies": {
