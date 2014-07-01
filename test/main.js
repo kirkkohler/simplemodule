@@ -15,4 +15,23 @@ describe('simplemodule', function() {
             });
         });
     });
+
+    describe('with a single element array', function() {
+        it('calls the callback with a single element array', function(done) {
+            var result = simplemodule([1], function(result) {
+                result.should.eql([1]);
+                done();
+            });
+        });
+    });
+
+    describe('with an unsorted two element array', function() {
+        it('calls the callback with a sorted two element array', function(done) {
+            var result = simplemodule([2, 1], function(result) {
+                result.should.eql([1, 2]);
+                done();
+            });
+        });
+    });
+
 });
